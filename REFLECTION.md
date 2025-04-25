@@ -1,1 +1,2 @@
-One thing that surprised me about what’s inside the .git folder was that the .git folder is a hidden folder by default, and it hides quite a few files and folders, it looks like log and backup something. That is a quite mysterious.
+One thing that surprised me about what’s inside the .git folder was that the .git folder is a hidden folder by default, and it hides quite a few files and folders, it looks like log and backup something. That is a quite mysterious. 
+I'm interested about the git rebase command, moves your branch to a new base commit. It's really abstract.
