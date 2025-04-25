@@ -1,0 +1,40 @@
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> md first-git-lab
+
+
+    Directory: C:\Users\DNA\Documents\College\TTPR\getting-git-1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/24/2025   9:24 PM                first-git-lab
+
+
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> cd first-git-lab
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1\first-git-lab> 'Hello Git!' > hello.txt
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> git add first-git-lab
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> git status
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   first-git-lab/hello.txt
+
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> git commit -m "Initial Comment - Hello World"
+[main ba54c25] Initial Comment - Hello World
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first-git-lab/hello.txt
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> git log --oneline
+ba54c25 (HEAD -> main) Initial Comment - Hello World
+cedb020 (origin/main, origin/HEAD) Merge pull request #5 from phyuphyuhtar/main
+b2bed8e message
+69aaba0 adds HW 1
+c541dfe Initial commit
+
+**Object File Hashes**
+acc31125be26de37231e367074f8b6944576c9f1
+ba54c254197a427acfa2e0599b171c2e626b6622
+bb018185296dcf9e68b3a651ce899e5a7c73c7f2
+e8f6f6755b79c0ad78e5461b36c93401efc21037
+
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> 'Reflection:' > REFLECTION.md
+PS C:\Users\DNA\Documents\College\TTPR\getting-git-1> 
