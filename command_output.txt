@@ -1,0 +1,14 @@
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -m'learned to use git today'
+[main f4ffde9] learned to use git today
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lesson1.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:tomstao/getting-git-1.git
+   4e42499..f4ffde9  main -> main
