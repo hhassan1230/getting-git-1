@@ -1,0 +1,280 @@
+sutommy@sus-MacBook-Pro-2 getting-git-1 % touch lesson1.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git add .
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -'learned to use git today'
+error: unknown switch `l'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -m'learned to use git today'
+[main f4ffde9] learned to use git today
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lesson1.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 11 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:tomstao/getting-git-1.git
+   4e42499..f4ffde9  main -> main
+sutommy@sus-MacBook-Pro-2 getting-git-1 % touch reflection.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % touch command_output.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git add .
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -m'added the reflection.txt and command_oupput.txt files'
+[main 60fb9c7] added the reflection.txt and command_oupput.txt files
+ 3 files changed, 15 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 command_output.txt
+ create mode 100644 reflection.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git log
+commit 60fb9c7a3793311745a2164a450c33094c597cb6 (HEAD -> main)
+Author: Tao Su <96sutao@gmail.com>
+Date:   Fri Apr 25 11:53:51 2025 -0400
+
+    added the reflection.txt and command_oupput.txt files
+
+commit f4ffde9e47e761b75992d3018d889d84d862a2d5 (origin/main, origin/HEAD)
+Author: Tao Su <96sutao@gmail.com>
+Date:   Fri Apr 25 11:40:12 2025 -0400
+
+    learned to use git today
+
+commit 4e42499d86078b09322069a2a22f13debdcdcf59
+Author: Tao Su <96sutao@gmail.com>
+Date:   Thu Apr 24 18:44:47 2025 -0400
+
+    added a text file
+
+commit 2d82f45911433add962a1b47397b1067466ba9ce
+Author: Tao Su <96sutao@gmail.com>
+Date:   Thu Apr 24 18:26:21 2025 -0400
+
+    lesson1
+
+commit 69aaba0c2294ffe6cf920e65e06ce15d8d8c56be
+Author: Hessvacio Hassan <madeinbrooklyngames@gmail.com>
+Date:   Wed Apr 23 23:37:10 2025 -0400
+
+    adds HW 1
+
+commit c541dfe14a4fc5d189bca1a75849193483e4554c
+Author: Hessvacio Hassan <madeinbrooklyngames@gmail.com>
+Date:   Wed Apr 23 23:35:59 2025 -0400
+
+    Initial commit
+sutommy@sus-MacBook-Pro-2 getting-git-1 % touch hello.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git add .
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -m'Initial commit – add greeting'
+[main f9f6618] Initial commit – add greeting
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+sutommy@sus-MacBook-Pro-2 getting-git-1 % tree .git
+zsh: command not found: tree
+sutommy@sus-MacBook-Pro-2 getting-git-1 % brew install tree
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+==> Downloading https://ghcr.io/v2/homebrew/core/tree/manifests/2.2.1
+############################################################################################################################ 100.0%
+==> Fetching tree
+==> Downloading https://ghcr.io/v2/homebrew/core/tree/blobs/sha256:ccfac896234e1c63841b421873387c407f375af7e6db54abea549d24e3c69589
+############################################################################################################################ 100.0%
+==> Pouring tree--2.2.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/tree/2.2.1: 9 files, 187.7KB
+==> Running `brew cleanup tree`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+sutommy@sus-MacBook-Pro-2 getting-git-1 % tree -version
+tree: Invalid argument -`e'.
+usage: tree [-acdfghilnpqrstuvxACDFJQNSUX] [-L level [-R]] [-H [-]baseHREF]
+        [-T title] [-o filename] [-P pattern] [-I pattern] [--gitignore]
+        [--gitfile[=]file] [--matchdirs] [--metafirst] [--ignore-case]
+        [--nolinks] [--hintro[=]file] [--houtro[=]file] [--inodes] [--device]
+        [--sort[=]name] [--dirsfirst] [--filesfirst] [--filelimit[=]#] [--si]
+        [--du] [--prune] [--charset[=]X] [--timefmt[=]format] [--fromfile]
+        [--fromtabfile] [--fflinks] [--info] [--infofile[=]file] [--noreport]
+        [--hyperlink] [--scheme[=]schema] [--authority[=]host] [--opt-toggle]
+        [--version] [--help] [--] [directory ...]
+sutommy@sus-MacBook-Pro-2 getting-git-1 % tree .git
+.git
+├── COMMIT_EDITMSG
+├── FETCH_HEAD
+├── HEAD
+├── ORIG_HEAD
+├── config
+├── description
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   ├── push-to-checkout.sample
+│   └── update.sample
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       └── remotes
+│           └── origin
+│               ├── HEAD
+│               └── main
+├── objects
+│   ├── 0c
+│   │   └── 83ac4e895bb2cdb1aa51f61869e3bf7ccf4ec5
+│   ├── 13
+│   │   └── 566b81b018ad684f3a35fee301741b2734c8f4
+│   ├── 18
+│   │   └── b7497bc6ac5d30d1b215115be6d7d7cc2e12ac
+│   ├── 1a
+│   │   └── 9b828fcb573efb635aa55f0eb0e10464bbaf58
+│   ├── 24
+│   │   └── 643cc37449b4bde54411a80b8ed61258225e34
+│   ├── 2d
+│   │   └── 82f45911433add962a1b47397b1067466ba9ce
+│   ├── 30
+│   │   └── 8db1751bd50185a421d7cf4bbb158695e3381f
+│   ├── 35
+│   │   └── eb1ddfbbc029bcab630581847471d7f238ec53
+│   ├── 3a
+│   │   └── 76f9e05e58e1716a2d90a191a5642b2d13df6c
+│   ├── 48
+│   │   └── edf09228b4fcebcbbb8f163ac17279311ca2f6
+│   ├── 49
+│   │   └── 28d19c8ad7d672a22e450d9080c6718402e534
+│   ├── 4e
+│   │   └── 42499d86078b09322069a2a22f13debdcdcf59
+│   ├── 5b
+│   │   └── a21366df9b07e43bb5dcf7666400a076b0593c
+│   ├── 60
+│   │   └── fb9c7a3793311745a2164a450c33094c597cb6
+│   ├── 6d
+│   │   └── 67e7049b3ea819a26157f65aa3783e0247a965
+│   ├── 93
+│   │   └── 8a52c87ea2e39740bf86d8e57425f5fa3fe864
+│   ├── a3
+│   │   └── 35b2db7b7bb31fb5efce61affda94308732545
+│   ├── b8
+│   │   └── fe974e96a6c5c56931bbfc3e6de6a9857fd4a4
+│   ├── c5
+│   │   └── 40a1875c23291157459e56be7154cda7d6a79e
+│   ├── c7
+│   │   └── 478aff1b64dc98e630c7a4c4f645a4ca479ac5
+│   ├── e6
+│   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   ├── ec
+│   │   └── 7dcf51c460e6c66ea2c8d03012d960ea0566bb
+│   ├── f4
+│   │   └── ffde9e47e761b75992d3018d889d84d862a2d5
+│   ├── f9
+│   │   └── f66189e49ebb5e09e31e53558b609a21cb2abc
+│   ├── ff
+│   │   └── 52eb50ba395d0e27b702931c74c3775e71e050
+│   ├── info
+│   └── pack
+│       ├── pack-3bb4ee565a3bbd44c39cc7ca4d729cd6ef4b6f45.idx
+│       └── pack-3bb4ee565a3bbd44c39cc7ca4d729cd6ef4b6f45.pack
+├── packed-refs
+└── refs
+    ├── heads
+    │   └── main
+    ├── remotes
+    │   └── origin
+    │       ├── HEAD
+    │       └── main
+    └── tags
+
+41 directories, 56 files
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git cat-file -t <HASH>
+zsh: parse error near `\n'
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git cat-file -t <HASH>
+zsh: parse error near `\n'
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git add .
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git commit -m'Add reflection for Assignment 01'
+
+[main 96a77b5] Add reflection for Assignment 01
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename reflection.txt => REFLECTION.md (100%)
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+sutommy@sus-MacBook-Pro-2 getting-git-1 % git show
+commit 96a77b509a93aa58702c0c0bb35e464e611cee00 (HEAD -> main)
+Author: Tao Su <96sutao@gmail.com>
+Date:   Fri Apr 25 12:07:27 2025 -0400
+
+    Add reflection for Assignment 01
+
+diff --git a/reflection.txt b/REFLECTION.md
+similarity index 100%
+:
+
